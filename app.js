@@ -2,13 +2,14 @@ const express = require('express');
 const fetch = require('node-fetch');
 require('dotenv').config();
 
-app = express();
+const app = express();
+const port = process.env.PORT || 3000;
 
-app.listen(3000, () => console.log('listening at 3000'));
+app.listen(port, () => console.log(`listening at ${port}`));
 app.use(express.static('public'));
 app.use(express.json({ limit: '1mb' }));
 
-apiKey = process.env.API_KEY;
+const apiKey = process.env.API_KEY;
 
 app.get('/weather/:loc', async (req, res) => {
 	const loc = req.params.loc

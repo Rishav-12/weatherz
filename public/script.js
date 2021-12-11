@@ -25,7 +25,7 @@ async function fetchData(loc) {
 }
 
 buttonElement.addEventListener("click", () => {
-	loc = document.querySelector(".form-control").value;
+	const loc = document.querySelector(".form-control").value;
 
 	fetchData(loc).catch(err => {
 		imageElement.src = "emoji-g89f8f63a4_640.png";
