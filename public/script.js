@@ -1,5 +1,4 @@
 const imageElement = document.querySelector(".card-img-top");
-const cardTextElement = document.querySelector(".card-text");
 const buttonElement = document.querySelector(".btn");
 
 async function fetchData(loc) {
@@ -29,6 +28,13 @@ buttonElement.addEventListener("click", () => {
 
 	fetchData(loc).catch(err => {
 		imageElement.src = "emoji-g89f8f63a4_640.png";
-		cardTextElement.textContent = "Something went wrong! Please check your input or try again";
+
+		document.querySelector(".place").textContent = "";
+		document.querySelector(".weather").textContent = "No weather found. Please check your input or try again!";
+		document.querySelector(".temperature").textContent = "";
+		document.querySelector(".pressure").textContent = "";
+		document.querySelector(".humidity").textContent = "";
+		document.querySelector(".windSpeed").textContent = "";
+		document.querySelector(".cloudCover").textContent = "";
 	});
 });
