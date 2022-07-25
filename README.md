@@ -1,4 +1,4 @@
-# nice-weather-app
+# weatherz
 
 ### Motivation
 - [X] Build a web application that communicates with a 3rd party API
