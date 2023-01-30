@@ -1,4 +1,4 @@
-const imageElement = document.querySelector(".card-img-top");
+const imageElement = document.querySelector(".img-fluid");
 const buttonElement = document.querySelector(".btn");
 
 async function fetchData(loc) {
